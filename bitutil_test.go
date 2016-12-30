@@ -2,7 +2,7 @@ package bitutil
 
 import "testing"
 
-func TestGetTwoComplement8(t *testing.T) {
+func TestTwoComplementInt8ToRaw(t *testing.T) {
 	type args struct {
 		num int8
 	}
@@ -19,8 +19,8 @@ func TestGetTwoComplement8(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := GetTwoComplement8(tt.args.num); got != tt.want {
-				t.Errorf("GetTwoComplement8() = %v, want %v", got, tt.want)
+			if got := TwoComplementInt8ToRaw(tt.args.num); got != tt.want {
+				t.Errorf("TwoComplementInt8ToRaw() = %v, want %v", got, tt.want)
 			}
 		})
 	}

@@ -16,10 +16,10 @@ import (
 
 func main() {
 
-	fmt.Println(bitutil.GetTwoComplement8(127))
-	fmt.Println(bitutil.GetTwoComplement8(1))
-	fmt.Println(bitutil.GetTwoComplement8(-1))
-	fmt.Println(bitutil.GetTwoComplement8(-128))
+	fmt.Println(bitutil.TwoComplementInt8ToRaw(127))
+	fmt.Println(bitutil.TwoComplementInt8ToRaw(1))
+	fmt.Println(bitutil.TwoComplementInt8ToRaw(-1))
+	fmt.Println(bitutil.TwoComplementInt8ToRaw(-128))
 	os.Exit(0)
 }
 

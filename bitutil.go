@@ -1,6 +1,6 @@
 package bitutil
 
-func GetTwoComplement8(num int8) string {
+func TwoComplementInt8ToRaw(num int8) string {
 	var ret = []byte("00000000")
 
 	for i := range ret {
