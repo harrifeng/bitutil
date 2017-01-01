@@ -1,5 +1,10 @@
 package bitutil
 
+import (
+	"strconv"
+	"strings"
+)
+
 func TwoComplementInt8ToRaw(num int8) string {
 	var ret = []byte("00000000")
 
@@ -18,4 +23,19 @@ func TwoComplementInt8ToRaw(num int8) string {
 		end--
 	}
 	return string(ret)
+}
+
+func HexStringToBinaryString(x string) string {
+	var ret []string
+
+	for i := 0; i < len(x); i++ {
+		curStr := x[i : i+1]
+		ret = append(ret, hexToBinary(curStr))
+	}
+	return strings.Join(ret, "|")
+}
+
+func hexToBinary(x string) string {
+	base, _ := strconv.ParseInt(x, 16, 10)
+	return strconv.FormatInt(base, 2)
 }
