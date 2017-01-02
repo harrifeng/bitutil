@@ -1,6 +1,7 @@
 package bitutil
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -37,5 +38,5 @@ func HexStringToBinaryString(x string) string {
 
 func hexToBinary(x string) string {
 	base, _ := strconv.ParseInt(x, 16, 10)
-	return strconv.FormatInt(base, 2)
+	return fmt.Sprintf("%04s", strconv.FormatInt(base, 2))
 }
